@@ -1,9 +1,0 @@
-[submodule "esp-idf"]
-	path = esp-idf
-	url = https://github.com/espressif/esp-idf.git
-[submodule "micropython"]
-	path = micropython
-	url = https://github.com/acamilo/micropython.git
-[submodule "ohs2018-badge-upython-module"]
-	path = badge-module
-	url = https://github.com/acamilo/ohs2018-badge-upython-module.git
