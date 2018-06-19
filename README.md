@@ -2,8 +2,9 @@
 ```
 git submodule update --init --recursive
 
+cd micropython/
 make -C mpy-cross
-cd micopython/ports/esp32/
+cd ports/esp32/
 make
 
 make erase
