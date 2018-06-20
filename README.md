@@ -1,5 +1,6 @@
 # ohs2018-badge-firmware
 ```
+ln -s badge micropython/ports/esp32/badge
 git submodule update --init --recursive
 
 cd micropython/
