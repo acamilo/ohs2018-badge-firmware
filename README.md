@@ -25,26 +25,26 @@ Add the following to the end of your `~/.bashrc` file
 ```
 export PATH="$PATH:$HOME/esp/xtensa-esp32-elf/bin"
 ```
-
-## Install Dependencies
+## Setup Project
+### Install Project Dependencies
 ```
 sudo apt-get install build-essential libreadline-dev libffi-dev git pkg-config
 
 ```
-## Setup the Repo
+### Setup the Repo
 ```
 git submodule update --init --recursive
 ln -s $HOME/ohs2018-badge-firmware/badge/ $HOME/ohs2018-badge-firmware/micropython/ports/esp32/
 ```
 
-## Setup ESPIDF Variable
+### Setup ESPIDF Variable
 add this to the end of your `~/.bashrc` file
 
 ```
 export ESPIDF="/home/oshwa/ohs2018-badge-firmware/esp-idf"
 ```
 
-## Build The Firmware
+### Build The Firmware
 ```
 cd micropython/
 make -C mpy-cross
