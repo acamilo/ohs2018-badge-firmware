@@ -34,7 +34,6 @@ sudo apt-get install build-essential libreadline-dev libffi-dev git pkg-config
 ### Setup the Repo
 ```
 git submodule update --init --recursive
-ln -s $HOME/ohs2018-badge-firmware/badge/ $HOME/ohs2018-badge-firmware/micropython/ports/esp32/
 ```
 
 ### Setup ESPIDF Variable
