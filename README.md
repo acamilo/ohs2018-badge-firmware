@@ -33,6 +33,7 @@ sudo apt-get install build-essential libreadline-dev libffi-dev git pkg-config
 ```
 ### Setup the Repo
 ```
+cd ~/ohs2018-badge-firmware/
 git submodule update --init --recursive
 ```
 
@@ -40,7 +41,7 @@ git submodule update --init --recursive
 add this to the end of your `~/.bashrc` file
 
 ```
-export ESPIDF="/home/oshwa/ohs2018-badge-firmware/esp-idf"
+export ESPIDF="$HOME/ohs2018-badge-firmware/esp-idf"
 ```
 
 ### Build The Firmware
