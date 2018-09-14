@@ -13,4 +13,6 @@ cd micropython/
 # build 
 make -C mpy-cross
 cd ports/esp32/
+#debug dump env vars
+env
 make
