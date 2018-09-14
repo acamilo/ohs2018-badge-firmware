@@ -2,8 +2,7 @@ language: generic
 
 sudo: required
 
-on:
-  tags: true
+if: tag IS present
 
 addons:
   apt:
@@ -23,8 +22,7 @@ addons:
 
 script: bash scripts/build.sh
 
+
 deploy:
   provider: script
   script: bash scripts/deploy.sh
-  on:
-    tag: true
