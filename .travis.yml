@@ -23,3 +23,8 @@ addons:
 
 script: bash scripts/build.sh
 
+deploy:
+  provider: script
+  script: bash scripts/deploy.sh
+  on:
+    tag: true
