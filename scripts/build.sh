@@ -7,7 +7,7 @@ export PATH="$PATH:`pwd`/xtensa-esp32-elf/bin"
 
 # init submodules
 git submodule update --init --recursive
-export ESPIDF="`pwd`/ohs2018-badge-firmware/esp-idf"
+export ESPIDF="`pwd`/esp-idf"
 cd micropython/
 
 # build 
