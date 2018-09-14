@@ -1,0 +1,23 @@
+language: generic
+
+sudo: required
+
+addons:
+  apt:
+    packages:
+       - wget
+       - make
+       - libncurses-dev
+       - flex
+       - bison
+       - gperf
+       - python
+       - python-serial
+       - build-essential
+       - libreadline-dev
+       - libffi-dev
+       - pkg-config
+
+after_success: |
+  bash scripts/build.sh
+
