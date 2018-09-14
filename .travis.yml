@@ -2,6 +2,9 @@ language: generic
 
 sudo: required
 
+on:
+  tags: true
+
 addons:
   apt:
     packages:
@@ -18,6 +21,5 @@ addons:
        - libffi-dev
        - pkg-config
 
-after_success: |
-  bash scripts/build.sh
+script: bash scripts/build.sh
 
