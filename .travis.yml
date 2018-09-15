@@ -1,4 +1,5 @@
 language: generic
+
 branches:
   only:
   - /(\d+\.)?(\d+\.)?(\*|\d+)$/
@@ -26,5 +27,6 @@ addons:
 script: bash scripts/build.sh
 
 after_success:
-  - bash scripts/deploy.sh
+  - pip install PyGithub
+  - python scripts/deploy.py
 
