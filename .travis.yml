@@ -9,7 +9,7 @@ sudo: required
 if: tag IS present
 
 before_install:
-  - sudo add-apt-repository --force-yes ppa:jonathonf/python-2.7
+  - sudo add-apt-repository --yes ppa:jonathonf/python-2.7
   - sudo apt-get update
   - sudo apt-get install python2.7
 
