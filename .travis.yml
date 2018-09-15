@@ -28,6 +28,5 @@ script: bash scripts/build.sh
 
 after_success:
   - pip install PyGithub
-  - pip install hashlib
   - python scripts/deploy.py
 
