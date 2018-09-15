@@ -27,6 +27,9 @@ addons:
        - libssl-dev
        - libffi-dev
 
+before_script:
+  - sudo pip install pyserial
+
 script: bash scripts/build.sh
 
 after_success:
