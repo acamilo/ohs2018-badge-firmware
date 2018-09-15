@@ -1,7 +1,7 @@
 language: generic
 branches:
   only:
-  - \d+(\.\d+)+
+  - /(\d+\.)?(\d+\.)?(\*|\d+)$/
 
 sudo: required
 
