@@ -15,8 +15,8 @@ tag = os.environ['TRAVIS_TAG']
 name = "Release %s" % tag
 message = ""
  
-#release = repo.create_git_release(tag,name,message)
-#release.upload_asset("micropython/ports/esp32/build/firmware.bin")
+release = repo.create_git_release(tag,name,message)
+release.upload_asset("micropython/ports/esp32/build/firmware.bin")
 
 r = repo.get_latest_release()
 
