@@ -27,6 +27,7 @@ addons:
 script: bash scripts/build.sh
 
 after_success:
+  - sudo pip install 'requests[security]'
   - sudo pip install pyOpenSSL ndg-httpsclient pyasn
   - sudo pip install PyGithub
   - python scripts/deploy.py
