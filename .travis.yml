@@ -1,7 +1,7 @@
 language: generic
 branches:
   only:
-  - master
+  - /(\d+\.)?(\d+\.)?(\*|\d+)$/
 
 sudo: required
 
@@ -25,11 +25,6 @@ addons:
 
 script: bash scripts/build.sh
 
+after_success:
+  - bash scripts/deploy.sh
 
-deploy:
-  branches:
-    only:
-      - /(\d+\.)?(\d+\.)?(\*|\d+)$/
-  provider: script
-  skip_cleanup: true
-  script: bash scripts/deploy.sh
