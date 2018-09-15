@@ -27,6 +27,6 @@ addons:
 script: bash scripts/build.sh
 
 after_success:
-  - pip install PyGithub
+  - sudo pip install PyGithub
   - python scripts/deploy.py
 
