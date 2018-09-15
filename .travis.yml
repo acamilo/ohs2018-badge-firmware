@@ -28,7 +28,7 @@ addons:
        - libffi-dev
 
 before_script:
-  - sudo pip install pyserial
+  - sudo pip install serial
 
 script: bash scripts/build.sh
 
