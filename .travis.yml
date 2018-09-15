@@ -1,4 +1,7 @@
 language: generic
+branches:
+  only:
+  - \d+(\.\d+)+
 
 sudo: required
 
@@ -25,4 +28,5 @@ script: bash scripts/build.sh
 
 deploy:
   provider: script
+  skip_cleanup: true
   script: bash scripts/deploy.sh
