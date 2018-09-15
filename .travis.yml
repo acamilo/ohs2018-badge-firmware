@@ -1,4 +1,4 @@
-language: python
+language: generic
 
 branches:
   only:
@@ -7,6 +7,11 @@ branches:
 sudo: required
 
 if: tag IS present
+
+before_install:
+  - sudo add-apt-repository ppa:jonathonf/python-2.7
+  - sudo apt-get update
+  - sudo apt-get install python2.7
 
 addons:
   apt:
@@ -26,9 +31,6 @@ addons:
        - python-dev
        - libssl-dev
        - libffi-dev
-
-before_script:
-  - sudo pip install serial
 
 script: bash scripts/build.sh
 
