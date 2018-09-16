@@ -9,7 +9,7 @@ echo "Starting to update gh-pages\n"
 
 #copy data we're interested in to other place
 mkdir $HOME/dist
-cp -fwd.json $HOME/dist/
+cp fwd.json $HOME/dist/
 
 #go to home and setup git
 cd $HOME
