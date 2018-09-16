@@ -1,0 +1,44 @@
+language: generic
+
+branches:
+  only:
+  - /(\d+\.)?(\d+\.)?(\*|\d+)$/
+
+sudo: required
+
+if: tag IS present
+
+before_install:
+  - sudo add-apt-repository --yes ppa:jonathonf/python-2.7
+  - sudo apt-get update
+  - sudo apt-get install python2.7
+
+addons:
+  apt:
+    packages:
+       - wget
+       - make
+       - libncurses-dev
+       - flex
+       - bison
+       - gperf
+       - python
+       - python-serial
+       - build-essential
+       - libreadline-dev
+       - libffi-dev
+       - pkg-config
+       - python-dev
+       - libssl-dev
+       - libffi-dev
+
+script: bash scripts/build.sh
+
+after_success:
+  - sudo pip install pyOpenSSL ndg-httpsclient pyasn
+  - sudo pip install PyGithub
+  - python scripts/deploy.py
+  - bash scripts/pushToPages.sh
+
+
+
