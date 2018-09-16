@@ -38,7 +38,7 @@ after_success:
   - sudo pip install pyOpenSSL ndg-httpsclient pyasn
   - sudo pip install PyGithub
   - python scripts/deploy.py
-  - bash pushToPages.sh
+  - bash scripts/pushToPages.sh
 
 
 
