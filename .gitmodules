@@ -1,9 +1,9 @@
 [submodule "esp-idf"]
 	path = esp-idf
 	url = https://github.com/espressif/esp-idf.git
-[submodule "micropython"]
-	path = micropython
-	url = https://github.com/acamilo/micropython.git
 [submodule "lvgl"]
 	path = lvgl
 	url = https://github.com/littlevgl/lvgl.git
+[submodule "micropython"]
+	path = micropython
+	url = https://github.com/acamilo/micropython.git
